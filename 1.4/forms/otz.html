@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="../js/javascript.js"></script>
+    
+    <title>Отзыв</title>
+</head>
+<body>
+    <div class="title">
+        <div class="main_title  otz">
+            <h1>Форма добавление отзыва</h1>
+        </div>
+    </div>
+    
+    <div class="content otz">
+        <div class="form otz">
+            <form action="" id="otz">
+
+                <div class="fields otz">
+                    <label>
+                        <p>Выберите категорию</p>
+                        <select name="" id="">
+                            <option value="">Велосипеды</option>
+                            <option value="">Самокаты</option>
+                            <option value="">Мопеды</option>
+                        </select>
+                    </label>
+                </div>
+                
+                <div class="fields otz">
+                    <label>
+                        <p>Ваш отзыв</p>
+                        <textarea name="" id="tx_ar" cols="30" rows="10"></textarea>
+                    </label>
+                </div>
+                        
+                <div class="fields otz ">
+                    <label>
+                        <p>Оценка товара</p>    
+                        <input type="radio" name="mark" value="1"> <span class="marks">1</span> 
+                        <input type="radio" name="mark" value="2"> <span class="marks">2</span> 
+                        <input type="radio" name="mark" value="3"> <span class="marks">3</span>
+                        <input type="radio" name="mark" value="4"> <span class="marks">4</span> 
+                        <input type="radio" name="mark" value="5"> <span class="marks">5</span> 
+                    </label>
+                </div>
+            <button class="submit_btn" name="submit" onclick="valid_otz(document.getElementById('otz'))">Оставить отзыв</button>
+            </form>
+    </div>
+ </div>
+
+    <div class="footer">
+        <div class="main_page">
+            <a href="../index.html">Главная</a>
+        </div>
+    </div>
+</body>
+</html>

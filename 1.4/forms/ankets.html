@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="../js/javascript.js"></script>
+    <title>Анкетирование</title>
+</head>
+<body onload="valid_an()">
+    <div class="title">
+        <div class="main_title">
+            <h1>Форма анкетирования</h1>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="form ankets">
+            <form action="" id="ankets">
+                <div class="fields ankets">
+                    <span>Вопрос</span>
+                    <label class="ques"><input type="checkbox" name="q1" id="ques1" value="1">1 </label>  
+                    <label class="ques"><input type="checkbox" name="q1" id="ques1" value="2">2 </label>  
+                    <label class="ques"><input type="checkbox" name="q1" id="ques1" value="3">3 </label>  
+                    <label class="ques"><input type="checkbox" name="q1" id="ques1" value="4">4 </label>  
+                </div>
+
+                <div class="fields ankets">
+                    <span>Вопрос 2</span>
+                    <label class="ques"><input type="checkbox" name="q2" id="ques2" value="1">1 </label>
+                    <label class="ques"><input type="checkbox" name="q2" id="ques2" value="2">2 </label>
+                    <label class="ques"><input type="checkbox" name="q2" id="ques2" value="3">3 </label>
+                    <label class="ques"><input type="checkbox" name="q2" id="ques2" value="4">4 </label>
+                </div>
+
+                <div class="fields ankets">
+                    <span>Вопрос 3</span>
+                    <label class="ques"><input type="checkbox" name="q3" id="ques3" value="1">1 </label>
+                    <label class="ques"><input type="checkbox" name="q3" id="ques3" value="2">2 </label>
+                    <label class="ques"><input type="checkbox" name="q3" id="ques3" value="3">3 </label>
+                    <label class="ques"><input type="checkbox" name="q3" id="ques3" value="4">4 </label>    
+
+                </div>
+                <button class="submit_btn" name="submit" onclick="valid_ankets()">Оставить отзыв</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="main_page">
+            <a href="../index.html">Главная</a>
+        </div>
+    </div>
+</body>
+</html>

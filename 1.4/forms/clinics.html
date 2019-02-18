@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="../js/javascript.js"></script>
+    <title>Анкетирование</title>
+</head>
+<body>
+    <div class="title">
+        <div class="main_title">
+            <h1>Форма записи в клинику</h1>
+        </div>
+    </div>
+
+    <div class="content clinics">
+        <div class="form clinics">
+            <form action="" id="clinics">
+                <div class="fields clinics">
+                    <label >
+                        <p>Описание симптомов</p>
+                        <textarea name="" id="sympt" cols="30" rows="10"></textarea>
+                    </label>
+                </div>
+
+                <div class="fields clinics">
+                    <label >
+                        <p>Выберите специалиста</p>
+                        <select name="doctors" id="">
+                        <option value="">Терапевт</option>
+                        <option value="">ЛОР</option>
+                        <option value="">Окулист</option>
+                        <option value="">Хирург</option>
+                        </select>
+                    </label>
+                                   </div>
+
+                <div class="fields clinics">
+                    <label >
+                        <span>Дата</span>
+                        <input type="date" name="" id="date">
+                    </label>
+                </div>
+
+                <div class="fields clinics">
+                        <label >
+                            <span>Время</span>
+                            <input type="time" name="" id="time">
+                        </label>
+                    </div>
+                
+                <div class="fields clinics">
+                    <input type="file" name="add_res" id="">
+                </div>
+
+                <button class="submit_btn" name="submit" onclick="valid_clinics(document.getElementById('clinics'))">Отправить</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="main_page">
+            <a href="../index.html">Главная</a>
+        </div>
+    </div>
+</body>
+</html>

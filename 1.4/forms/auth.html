@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="../js/javascript.js"></script>
+    <title>Ввойдите</title>
+</head>
+<body>
+    <div class="title">
+        <div class="main_title">
+            <h1>Форма авторизации</h1>
+        </div>
+    </div>
+    <div class="content autoris">
+        <div class="form autoris">
+            <form action="google.com.ua" method="GET" id="autorisat">
+                <div class="fields autoris">
+                    <label for="log"><span>Введите логин: </span></label>
+                    <input type="text" id="log">
+                </div>
+                
+                <div class="fields autoris">
+                    <label for="psw"><span>Введите пароль:</span></label>
+                    <input type="password" id="psw">
+                </div>
+            
+                <label>
+                    <span class="remb_me">Запомнить меня</span>
+                    <input type="checkbox" name="remb_me" id="remb_me">
+                </label>
+                <div class="autoris">
+                        <button class="submit_btn" name="submit" onclick="valid_aut(document.getElementById('autorisat'))">Войти</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="footer autoris">
+        <div class="main_page">
+            <a href="../index.html">Главная</a>
+        </div>
+    </div>
+</body>
+</html>
