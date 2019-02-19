@@ -1,8 +1,8 @@
-var space_exp=/\s/;
-var year_exp = /\d{4}/g;
-var reg_exp = /\d{2}/g;
-var logexp=/[0-9a-z]{3,10}/;
-var pswexp=/(?=.*[0-9])(?=.*[A-Z])[0-9a-zA-Z]{3,10}/g;
+const space_exp=/\s/;
+const year_exp = /\d{4}/g;
+const reg_exp = /\d{2}/g;
+const logexp=/[0-9a-z]{3,10}/;
+const pswexp=/(?=.*[0-9])(?=.*[A-Z])[0-9a-zA-Z]{3,10}/g;
 
 function valid_aut(autorisat){
     var login = autorisat.log.value;
@@ -67,8 +67,6 @@ function valid_ankets(){
 }
 
 function valid_clinics(clinics){
-    //var symptomy = clinics.sympt.value;
-
     var nowDate = new Date(); 
     var our_year = nowDate.getFullYear();
     var our_month = nowDate.getMonth();
@@ -107,6 +105,5 @@ function valid_clinics(clinics){
         alert("Клиника работает с 8 до 16");
         return false;
     }
-
     return true;
 }
