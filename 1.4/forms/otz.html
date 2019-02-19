@@ -19,7 +19,7 @@
     
     <div class="content otz">
         <div class="form otz">
-            <form action="" id="otz">
+            <form onsubmit="return valid_otz(document.getElementById('otz'))" action="vk.com" method="POST" id="otz">
 
                 <div class="fields otz">
                     <label>
@@ -49,7 +49,7 @@
                         <input type="radio" name="mark" value="5"> <span class="marks">5</span> 
                     </label>
                 </div>
-            <button class="submit_btn" name="submit" onclick="valid_otz(document.getElementById('otz'))">Оставить отзыв</button>
+            <button class="submit_btn" name="submit" >Оставить отзыв</button>
             </form>
     </div>
  </div>

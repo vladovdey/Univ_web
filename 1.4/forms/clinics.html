@@ -18,7 +18,7 @@
 
     <div class="content clinics">
         <div class="form clinics">
-            <form action="" id="clinics">
+            <form onsubmit="return valid_clinics(document.getElementById('clinics'))" action="ex.ua" method="POST" id="clinics">
                 <div class="fields clinics">
                     <label >
                         <p>Описание симптомов</p>
@@ -56,7 +56,7 @@
                     <input type="file" name="add_res" id="">
                 </div>
 
-                <button class="submit_btn" name="submit" onclick="valid_clinics(document.getElementById('clinics'))">Отправить</button>
+                <button class="submit_btn" name="submit" >Отправить</button>
             </form>
         </div>
     </div>

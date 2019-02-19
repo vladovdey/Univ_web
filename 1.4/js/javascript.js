@@ -10,11 +10,17 @@ function valid_aut(autorisat){
 
     if(logexp.test(login)==false&&pswexp.test(password)==false){
         alert("Заполните поля");
+        return false;
     }else if(logexp.test(login)==false){
         alert("Неверно введен логин");
+        return false;
     }else if(pswexp.test(password)==false){
         alert("Неверно введен пароль");
+        return false;
+    }else{
+        return true;
     }
+    
 }
 
 function valid_otz(otz){
@@ -22,17 +28,21 @@ function valid_otz(otz){
         
     if(tx_ar_otz.length ==0 || space_exp.test(tx_ar_otz)==true){
         alert("Оставьте свой отзыв");
+        return false;
     }
     var radio_btn=otz.mark.value;
     if(radio_btn == ''){
         alert("Поставьте оценку");
+        return false;
     }
+    return true;
 }
 
 function valid_ankets(){
     var checkb=document.querySelectorAll('.ques');
     var counter =0;
     var count_quest=checkb.length/4;
+
 
     for(var i = 0; i<12;i+=4){
         for(var j = i; j<i+4; j++){
@@ -49,6 +59,10 @@ function valid_ankets(){
     
     if(counter!=count_quest){
         alert("Ответьте на все вопросы");
+        return false;
+    }
+    else{
+        return true;
     }
 }
 
@@ -68,6 +82,7 @@ function valid_clinics(clinics){
     
     if(symptomy.length ==0 || space_exp.test(symptomy)==true){
         alert("Введите симптом");
+        return false;
     }
 
     if(date.length ==0){
@@ -79,6 +94,7 @@ function valid_clinics(clinics){
         
         if(year_users!=our_year || month_users!=our_month || date_users<=our_date){
             alert('Введите корректную дату');
+            return false;
         }
     }
 
@@ -89,6 +105,8 @@ function valid_clinics(clinics){
     }
     if(hours >=16 || hours<=08){
         alert("Клиника работает с 8 до 16");
+        return false;
     }
 
+    return true;
 }
