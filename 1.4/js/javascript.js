@@ -1,15 +1,15 @@
-const space_exp=/\s/;
+const space_exp=/^\s/;
 const year_exp = /\d{4}/g;
 const reg_exp = /\d{2}/g;
-const logexp=/[0-9a-z]{3,10}/;
-const pswexp=/(?=.*[0-9])(?=.*[A-Z])[0-9a-zA-Z]{3,10}/g;
+const logexp=/^[0-9a-z]{3,10}$/;
+const pswexp=/^(?=.*[0-9])(?=.*[A-Z])[0-9a-zA-Z]{3,10}$/g;
 
-function valid_aut(autorisat){
-    var login = autorisat.log.value;
-    var password = autorisat.psw.value;
+function valid_aut(){
+    var login = document.querySelector("#log").value;
+    var password = document.querySelector("#psw").value;
 
     if(logexp.test(login)==false&&pswexp.test(password)==false){
-        alert("Заполните поля");
+        alert("Неверно заполнены поля");
         return false;
     }else if(logexp.test(login)==false){
         alert("Неверно введен логин");
@@ -26,8 +26,9 @@ function valid_aut(autorisat){
 function valid_otz(otz){
     var tx_ar_otz = otz.tx_ar.value;
         
-    if(tx_ar_otz.length ==0 || space_exp.test(tx_ar_otz)==true){
+    if(tx_ar_otz.length ==0 ){
         alert("Оставьте свой отзыв");
+        console.log('ff');
         return false;
     }
     var radio_btn=otz.mark.value;
@@ -77,8 +78,11 @@ function valid_clinics(clinics){
     var date = clinics.date.value;
     var time = clinics.time.value;
     var hours = '';
-    
-    if(symptomy.length ==0 || space_exp.test(symptomy)==true){
+
+    console.log(space_exp.test(symptomy)==true);
+
+
+    if(symptomy.length ==0 ){
         alert("Введите симптом");
         return false;
     }

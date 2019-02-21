@@ -9,7 +9,7 @@
     
     <title>Анкетирование</title>
 </head>
-<body onload="valid_an()">
+<body>
     <div class="title">
         <div class="main_title">
             <h1>Форма анкетирования</h1>
@@ -18,7 +18,7 @@
 
     <div class="content">
         <div class="form ankets">
-            <form onsubmit="return valid_ankets()" action="php.net" method="GET" id="ankets">
+            <form onsubmit="return valid_ankets()" action="https://php.net" method="GET" id="ankets">
                 <div class="fields ankets">
                     <span>Вопрос</span>
                     <label class="ques"><input type="checkbox" name="q1" id="ques1" value="1">1 </label>  
@@ -43,7 +43,7 @@
                     <label class="ques"><input type="checkbox" name="q3" id="ques3" value="4">4 </label>    
 
                 </div>
-                <button class="submit_btn" name="submit" onclick="">Оставить отзыв</button>
+                <button class="submit_btn">Оставить заявку</button>
             </form>
         </div>
     </div>

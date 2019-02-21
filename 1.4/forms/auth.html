@@ -17,15 +17,15 @@
     </div>
     <div class="content autoris">
         <div class="form autoris">
-            <form onsubmit="return valid_aut(document.getElementById('autorisat'))" action="google.com.ua" method="GET" id="autorisat">
+            <form onsubmit="return valid_aut()" action="https://google.com.ua" method="GET" id="autorisat">
                 <div class="fields autoris">
                     <label for="log"><span>Введите логин: </span></label>
-                    <input type="text" id="log">
+                    <input type="text" name="log" id="log">
                 </div>
                 
                 <div class="fields autoris">
                     <label for="psw"><span>Введите пароль:</span></label>
-                    <input type="password" id="psw">
+                    <input type="password" name="psw" id="psw">
                 </div>
             
                 <label>
@@ -33,7 +33,7 @@
                     <input type="checkbox" name="remb_me" id="remb_me">
                 </label>
                 <div class="autoris">
-                        <button class="submit_btn" name="submit" >Войти</button>
+                        <button class="submit_btn" >Войти</button>
                 </div>
             </form>
         </div>
