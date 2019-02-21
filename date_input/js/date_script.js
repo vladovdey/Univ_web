@@ -1,56 +1,49 @@
 const date_area = document.querySelector("#date_area"),
-    month_val = document.querySelectorAll(".month_area"),
-    year_area = document.querySelectorAll(".year_val"),
+    month_val = document.querySelector('#month'),
+    year_area = document.querySelector("#year_area"),
     vis = document.querySelector("#vis");
+//Переменная високосного года
+var bool_vis = false;
+//Слушатель изменения месяца
+month_val.addEventListener('change', () => {
+    var feb = document.querySelectorAll(".not_feb"), //29,30,31-ое число
+        big_month = document.querySelector("#big_month"); //31-ое число
+    //Обнуление даты
+    date_area.value = 1;
 
-    var bool_vis = false;
-    console.log(year_area);
-
-
-month_val.forEach(function(month){
-    month.addEventListener('click',()=>{
-        console.log("fg");
-        var feb = document.querySelectorAll(".not_feb"),
-        month_area = document.querySelector("#month").value,
-        big_month = document.querySelector("#big_month");
-
-        feb.forEach(function(feb_date){
+    feb.forEach(function (feb_date) {
         //Проверка месяца
-        if(month_area==2){
+        if (month_val.value == 2) {
             feb_date.style.display = 'none';
-                if(date_area.value>28){
-                    date_area.value = 1;
-                }
-                if(bool_vis==true){
-                    vis.style.display = "block";
-                }
-         
-        }else if(month_area<8 && month_area%2==0){
+            if (date_area.value > 28) {
+                date_area.value = 1;
+            }
+            if (bool_vis == true) {
+                vis.style.display = "block";
+            }
+
+        } else if (month_val.value < 8 && month_val.value % 2 == 0) {
             feb_date.style.display = 'block';
-            big_month.style.display='none';
-        }else if(month_area>8 && month_area%2!=0){
+            big_month.style.display = 'none';
+        } else if (month_val.value > 8 && month_val.value % 2 != 0) {
             feb_date.style.display = 'block';
-            big_month.style.display='none';
-        }else{
+            big_month.style.display = 'none';
+        } else {
             feb_date.style.display = 'block';
-            big_month.style.display='block';
+            big_month.style.display = 'block';
         }
-    });
     });
 });
 
-year_area.forEach(function(year){
-    year.addEventListener('click',()=>{
-            var month_area = document.querySelector("#month");
-            
-
-            date_area.value = 1;
-            month_area.value = 1;
-        //Проверка високосности
-        if(year.value%4==0&&year.value%100!=0 || year.value%400==0){
-            bool_vis = true;
-        }else{
-            bool_vis = false;
-        }
-    });
+//Слушатель изменения года
+year_area.addEventListener('change', () => {
+    //Обнуление даты и месяца
+    date_area.value = 1;
+    month_val.value = 1;
+    //Проверка високосности
+    if (year_area.value % 4 == 0 && year_area.value % 100 != 0 || year_area.value % 400 == 0) {
+        bool_vis = true;
+    } else {
+        bool_vis = false;
+    }
 });
